@@ -1,114 +1,114 @@
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPT.PCH
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\STDAFX.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VC110.PDB
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPT.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPTDOC.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPTVIEW.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\CPUID.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\DSGRAPHBUILDER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\IMAGECONVERT.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\IMAGEFILTER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\LINKLIST.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\NOISEGENERATOR.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VFWINTERFACE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VIDEOENHANCE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPDEINTERLACING.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPENCODEDECODE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPFEATUREPOINT.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPFIELDORDER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPMCTF.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPME.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPORDERFILTER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPTEST.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPVIDEOENHANCE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPCOMPRESS.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\APPCONVERT.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\AVILOADER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\AVIWRITER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\CAPTURESELECT.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\CHILDFRM.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\CONSOLEVIEW.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\CUSTOMSPLITTERWND.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\DSVIDEOGRABBER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\IMAGELOADER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\IMGPARAM.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\MAINFRM.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\PROCESSING.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\TUNNEL.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VIDEOCAPTURE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VIDEOCTRLBAR.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VIDEOCTRLFRM.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\BITSTREAM.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\FIXEDPOINT_C.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\FRAME_YUV420.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\MCTEMPORALFILTER.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\MOTIONESTIMATION_YUV420.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VIDEODEINTERLACE.OBJ
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPT.EXE
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPT.PDB
-C:\USERS\RHYCHUNG\DESKTOP\PROGRAM TEMPLATE\VPT - COPY - COPY\DEBUG\VPT.RES
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppCompress.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppConvert.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppDeinterlacing.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppEncodeDecode.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppFeaturePoint.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppFieldOrder.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppMCTF.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppME.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppOrderFilter.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppTest.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AppVideoEnhance.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AviLoader.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\AviWriter.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\bitstream.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\CaptureSelect.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ChildFrm.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ConsoleView.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\cpuid.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\CustomSplitterWnd.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\DSGraphBuilder.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\DSVideoGrabber.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\fixedPoint_c.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\frame_yuv420.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ImageConvert.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ImageFilter.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ImageLoader.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\ImgParam.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\linklist.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\MainFrm.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\mcTemporalFilter.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\motionEstimation_yuv420.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\NoiseGenerator.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\Processing.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\stdafx.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\Tunnel.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VFWInterface.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VideoCapture.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VideoCtrlBar.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VideoCtrlFrm.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\videoDeinterlace.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\videoEnhance.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPT.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPTDoc.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPTView.obj
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\cl.command.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\CL.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\CL.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-cvtres.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-cvtres.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-mt.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-mt.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-rc.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link-rc.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link.command.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\link.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\rc.command.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\rc.read.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\rc.write.1.tlog
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPT.res
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPT.pch
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\vc110.idb
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\vc110.pdb
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPT.pdb
-C:\Users\rhychung\Desktop\Program Template\VPT - Copy - Copy\Debug\VPT.exe
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPT.EXE
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPT.PDB
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPT.RES
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPT.PCH
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\STDAFX.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VC110.PDB
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPT.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPTDOC.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VPTVIEW.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\CPUID.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\DSGRAPHBUILDER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\IMAGECONVERT.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\IMAGEFILTER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\LINKLIST.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\NOISEGENERATOR.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VFWINTERFACE.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VIDEOENHANCE.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPDEINTERLACING.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPENCODEDECODE.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPFEATUREPOINT.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPFIELDORDER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPMCTF.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPME.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPORDERFILTER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPTEST.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPVIDEOENHANCE.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPCONVERT.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\AVILOADER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\AVIWRITER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\CAPTURESELECT.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\CHILDFRM.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\CONSOLEVIEW.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\CUSTOMSPLITTERWND.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\DSVIDEOGRABBER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\IMAGELOADER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\IMGPARAM.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\MAINFRM.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\PROCESSING.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\TUNNEL.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VIDEOCAPTURE.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VIDEOCTRLBAR.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VIDEOCTRLFRM.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\APPCOMPRESS.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\BITSTREAM.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\FIXEDPOINT_C.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\FRAME_YUV420.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\MCTEMPORALFILTER.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\MOTIONESTIMATION_YUV420.OBJ
+\\MAC\HOME\DESKTOP\HKU\HKU-01\MULTIMEDIA\ASSIGNMENT\ASS02\PROGRAM TEMPLATE\VPT\DEBUG\VIDEODEINTERLACE.OBJ
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ImageFilter.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ConsoleView.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VideoCtrlBar.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ImageConvert.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ImgParam.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPTView.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPTDoc.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\Tunnel.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\DSVideoGrabber.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppTest.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\frame_yuv420.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\cpuid.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\CaptureSelect.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\NoiseGenerator.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ChildFrm.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\stdafx.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\CustomSplitterWnd.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppVideoEnhance.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\mcTemporalFilter.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppFieldOrder.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\videoDeinterlace.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\linklist.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\DSGraphBuilder.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\bitstream.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\Processing.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\MainFrm.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppDeinterlacing.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\ImageLoader.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppMCTF.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VideoCtrlFrm.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AviLoader.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\fixedPoint_c.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\videoEnhance.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppEncodeDecode.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppCompress.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppME.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VFWInterface.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppConvert.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AviWriter.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\motionEstimation_yuv420.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppOrderFilter.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VideoCapture.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\AppFeaturePoint.obj
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-cvtres.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link.command.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\rc.command.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\cl.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-rc.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\rc.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-rc.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-cvtres.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\cl.command.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\rc.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-mt.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\cl.write.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\link-mt.read.1.tlog
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.res
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.pch
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\vc110.idb
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.pdb
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\vc110.pdb
+\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.exe
