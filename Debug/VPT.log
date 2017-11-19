@@ -1,16 +1,27 @@
-﻿生成启动时间为 11/20/17 1:31:52 AM。
+﻿生成启动时间为 11/20/17 2:14:52 AM。
      1>项目“\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\VPT.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\VPT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt App\AppConvert.cpp
-         AppConvert.cpp
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(61): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(62): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(63): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(84): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(85): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(86): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt Tools\bitstream.c
-         bitstream.c
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\VPT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt App\AppCompress.cpp
+         AppCompress.cpp
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(54): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(55): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(63): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(64): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(75): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(95): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(96): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(104): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(105): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(116): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(136): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(137): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(145): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(146): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(157): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(200): warning C4101: “g”: 未引用的局部变量
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(200): warning C4101: “b”: 未引用的局部变量
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(200): warning C4101: “r”: 未引用的局部变量
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.exe" /INCREMENTAL /NOLOGO vfw32.lib opengl32.lib Glu32.lib winmm.lib strmiids.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE:NO /IMPLIB:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.lib" /MACHINE:X86 /PROFILE /SAFESEH Debug\VPT.res
          Debug\AppCompress.obj
@@ -64,4 +75,4 @@
 
 生成成功。
 
-已用时间 00:00:08.59
+已用时间 00:00:05.29
