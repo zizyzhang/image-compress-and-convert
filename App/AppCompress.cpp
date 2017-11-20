@@ -38,128 +38,49 @@ unsigned char *CAppCompress::Compress(int &cDataSize) {
     int compressedSize = 0;
 
     // 采用分通道游离的方法，按照每个通道相邻像素的重复性进行压缩
-    // 1.b通道
-    unsigned short curB = pInput[0];// 第一个像素的b
-    unsigned short repeat = 1;// 重复次数
-    for (int i = 1; i < cDataSize / 3; i++)
-    {
-        unsigned short nextB = pInput[i * 3 + 0];// 下一个像素的b
-        if (nextB == curB && repeat < 127)
-        {
-            ++repeat;
-            // 如果是最后一个则存储
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个b值组
-                compressedData[compressedSize] = repeat;
-                compressedData[compressedSize + 1] = curB;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-        else
-        {
-            // 存储上一个b值组
-            compressedData[compressedSize] = repeat;
-            compressedData[compressedSize + 1] = curB;
-            // 增加编码数据长度
-            compressedSize += 2;
-            // 换下一种b值
-            curB = nextB;
-            repeat = 1;
-            // 如果是最后一个
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个b值
-                compressedData[compressedSize] = 1;
-                compressedData[compressedSize + 1] = curB;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-    }
 
-    // 2.g通道
-    unsigned short curG = pInput[1];// 第一个像素的g
-    repeat = 1;// 重复次数
-    for (int i = 1; i < cDataSize / 3; i++)
-    {
-        unsigned short nextG = pInput[i * 3 + 1];// 下一个像素的g
-        if (nextG == curG && repeat <= 127)
-        {
-            ++repeat;
-            // 如果是最后一个则存储
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个g值组
-                compressedData[compressedSize] = repeat;
-                compressedData[compressedSize + 1] = curG;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-        else
-        {
-            // 存储上一个g值组
-            compressedData[compressedSize] = repeat;
-            compressedData[compressedSize + 1] = curG;
-            // 增加编码数据长度
-            compressedSize += 2;
-            // 换下一种g值
-            curG = nextG;
-            repeat = 1;
-            // 如果是最后一个
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个g值
-                compressedData[compressedSize] = 1;
-                compressedData[compressedSize + 1] = curG;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-    }
-
-    // 3.r通道
-    unsigned short curR = pInput[2];// 第一个像素的r
-    repeat = 1;// 重复次数
-    for (int i = 1; i < cDataSize / 3; i++)
-    {
-        unsigned short nextR = pInput[i * 3 + 2];// 下一个像素的r
-        if (nextR == curR && repeat <= 127)
-        {
-            ++repeat;
-            // 如果是最后一个则存储
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个g值组
-                compressedData[compressedSize] = repeat;
-                compressedData[compressedSize + 1] = curR;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-        else
-        {
-            // 存储上一个g值组
-            compressedData[compressedSize] = repeat;
-            compressedData[compressedSize + 1] = curR;
-            // 增加编码数据长度
-            compressedSize += 2;
-            // 换下一种r值
-            curR = nextR;
-            repeat = 1;
-            // 如果是最后一个
-            if (i == cDataSize / 3 - 1)
-            {
-                // 存储最后一个r值
-                compressedData[compressedSize] = 1;
-                compressedData[compressedSize + 1] = curR;
-                // 增加编码数据长度
-                compressedSize += 2;
-            }
-        }
-    }
+	for(int bgrIndex=0;bgrIndex<3;bgrIndex++){
+		unsigned short cur = pInput[bgrIndex];// 第一个像素
+    	unsigned short repeat = 1;// 重复次数
+		for (int i = 1; i < cDataSize / 3; i++)
+		{
+			unsigned short next = pInput[i * 3 + bgrIndex];// 下一个像素的b
+			if (next == cur && repeat < 127)
+			{
+				++repeat;
+				// 如果是最后一个则存储
+				if (i == cDataSize / 3 - 1)
+				{
+					// 存储最后一个b值组
+					compressedData[compressedSize] = repeat;
+					compressedData[compressedSize + 1] = cur;
+					// 增加编码数据长度
+					compressedSize += 2;
+				}
+			}
+			else
+			{
+				// 存储上一个b值组
+				compressedData[compressedSize] = repeat;
+				compressedData[compressedSize + 1] = cur;
+				// 增加编码数据长度
+				compressedSize += 2;
+				// 换下一种b值
+				cur = next;
+				repeat = 1;
+				// 如果是最后一个
+				if (i == cDataSize / 3 - 1)
+				{
+					// 存储最后一个b值
+					compressedData[compressedSize] = 1;
+					compressedData[compressedSize + 1] = cur;
+					// 增加编码数据长度
+					compressedSize += 2;
+				}
+			}
+		}
+	}
+    
 
     // 取出压缩后的纯数据
     cDataSize = compressedSize;
