@@ -1,83 +1,21 @@
-﻿生成启动时间为 11/20/17 1:19:25 PM。
+﻿生成启动时间为 11/28/17 3:06:13 PM。
      1>项目“\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\VPT.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\VPT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\VPT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt App\AppCompress.cpp App\AppConvert.cpp AviLoader.cpp AviWriter.cpp CaptureSelect.cpp ChildFrm.cpp ConsoleView.cpp CustomSplitterWnd.cpp DSVideoGrabber.cpp ImageLoader.cpp ImgParam.cpp MainFrm.cpp Processing.cpp Tunnel.cpp VideoCapture.cpp VideoCtrlBar.cpp VideoCtrlFrm.cpp VPT.cpp VPTDoc.cpp VPTView.cpp Tools\cpuid.cpp Tools\DSGraphBuilder.cpp Tools\ImageConvert.cpp Tools\ImageFilter.cpp Tools\linklist.cpp Tools\NoiseGenerator.cpp Tools\VFWInterface.cpp Tools\videoEnhance.cpp App\AppDeinterlacing.cpp App\AppEncodeDecode.cpp App\AppFeaturePoint.cpp App\AppFieldOrder.cpp App\AppMCTF.cpp App\AppME.cpp App\AppOrderFilter.cpp App\AppTest.cpp App\AppVideoEnhance.cpp
-         AppVideoEnhance.cpp
-         AppTest.cpp
-         AppOrderFilter.cpp
-         AppME.cpp
-         AppMCTF.cpp
-         AppFieldOrder.cpp
-         AppFeaturePoint.cpp
-         AppEncodeDecode.cpp
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appencodedecode.cpp(32): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : 参见“fopen”的声明
-         AppDeinterlacing.cpp
-         videoEnhance.cpp
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\videoenhance.cpp(339): warning C4101: “v_b”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\videoenhance.cpp(338): warning C4101: “v_r”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\videoenhance.cpp(338): warning C4101: “u_r”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\videoenhance.cpp(340): warning C4101: “d”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\videoenhance.cpp(339): warning C4101: “u_b”: 未引用的局部变量
-         VFWInterface.cpp
-         NoiseGenerator.cpp
-         linklist.cpp
-         ImageFilter.cpp
-         ImageConvert.cpp
-         DSGraphBuilder.cpp
-         cpuid.cpp
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\tools\cpuid.cpp(15): warning C4949: 只有使用“/clr[:option]”编译时，pragma“managed”和“unmanaged”才有意义
-         VPTView.cpp
-         VPTDoc.cpp
-         VPT.cpp
-         正在生成代码...
-         正在编译...
-         VideoCtrlFrm.cpp
-         VideoCtrlBar.cpp
-         VideoCapture.cpp
-         Tunnel.cpp
-         Processing.cpp
-         MainFrm.cpp
-         ImgParam.cpp
-         ImageLoader.cpp
-         DSVideoGrabber.cpp
-         CustomSplitterWnd.cpp
-         ConsoleView.cpp
-         ChildFrm.cpp
-         CaptureSelect.cpp
-         AviWriter.cpp
-         AviLoader.cpp
-         AppConvert.cpp
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(61): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(62): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(63): warning C4244: “=”: 从“double”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(84): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(85): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appconvert.cpp(86): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\VPT.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt App\AppCompress.cpp
          AppCompress.cpp
      1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(55): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(56): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(64): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(65): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(76): warning C4244: “=”: 从“unsigned short”转换到“unsigned char”，可能丢失数据
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(121): warning C4101: “g”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(121): warning C4101: “b”: 未引用的局部变量
-     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(121): warning C4101: “r”: 未引用的局部变量
-         正在生成代码...
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt Tools\bitstream.c
-         bitstream.c
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(99): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(104): warning C4018: “<”: 有符号/无符号不匹配
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(148): warning C4018: “<”: 有符号/无符号不匹配
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(209): warning C4018: “<”: 有符号/无符号不匹配
+     1>\\mac\home\desktop\hku\hku-01\multimedia\assignment\ass02\program template\vpt\app\appcompress.cpp(210): warning C4018: “>=”: 有符号/无符号不匹配
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I../H264Codec/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Tools\fixedPoint_c.c Tools\frame_yuv420.c Tools\mcTemporalFilter.c Tools\motionEstimation_yuv420.c Tools\videoDeinterlace.c
+         正在跳过...(未检测到相关更改)
          videoDeinterlace.c
          motionEstimation_yuv420.c
          mcTemporalFilter.c
          frame_yuv420.c
          fixedPoint_c.c
-         正在生成代码...
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /l"0x0409" /IDebug\ /nologo /fo"Debug\VPT.res" VPT.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.exe" /INCREMENTAL /NOLOGO vfw32.lib opengl32.lib Glu32.lib winmm.lib strmiids.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE:NO /IMPLIB:"\\Mac\Home\Desktop\HKU\HKU-01\multimedia\Assignment\Ass02\Program Template\VPT\Debug\VPT.lib" /MACHINE:X86 /PROFILE /SAFESEH Debug\VPT.res
          Debug\AppCompress.obj
@@ -131,4 +69,4 @@
 
 生成成功。
 
-已用时间 00:00:28.49
+已用时间 00:00:06.47
