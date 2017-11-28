@@ -4,6 +4,7 @@
 #include <map>
 #include <cmath>
 #include <bitset>
+#include <unordered_map>
 
 #define max(a, b)  (((a) > (b)) ? (a) : (b))
 #define min(a, b)  (((a) < (b)) ? (a) : (b))
@@ -18,7 +19,7 @@ struct Node {
     int lchild, rchild, parent;
 };
 
-string *huffMap = new string[256];
+//string *huffMap = new string[256];
 
 
 
@@ -66,19 +67,20 @@ void Select(Node huffTree[], int *a, int *b, int n)//找权值最小的两个a�
     }
 }
 
-void Huff_Tree(Node huffTree[], int w[], string ch[], int n) {
-    for (int i = 0; i < 2 * n - 1; i++) //初始过程
+Node *Huff_Tree(int w[]) {
+    Node *huffTree = new Node[256 * 2];
+    for (int i = 0; i < 2 * 256 - 1; i++) //初始过程
     {
         huffTree[i].parent = -1;
         huffTree[i].lchild = -1;
         huffTree[i].rchild = -1;
         huffTree[i].code = "";
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < 256; i++) {
         huffTree[i].weight = w[i];
-        huffTree[i].ch = ch[i];
+        huffTree[i].ch = to_string(i);
     }
-    for (int k = n; k < 2 * n - 1; k++) {
+    for (int k = 256; k < 2 * 256 - 1; k++) {
         int i1 = 0;
         int i2 = 0;
         Select(huffTree, &i1, &i2, k); //将i1，i2节点合成节点k
@@ -88,39 +90,42 @@ void Huff_Tree(Node huffTree[], int w[], string ch[], int n) {
         huffTree[k].lchild = i1;
         huffTree[k].rchild = i2;
     }
+    return huffTree;
 }
 
-map<string,int> rebuildHuffTree(string &data,int &offset){
-	offset = 0;
-    map<string,int> deCodeMap;
+unordered_map<string, int> rebuildHuffTree(string &data, int &offset) {
+    offset = 0;
+    unordered_map<string, int> deCodeMap;
     for (int i = 0; i < 256; i++) {
         bitset<8> codeLengthBits;
-        for(int j=0;j<8;j++){
-            codeLengthBits[7-j]  =data[offset+j]-'0';
+        for (int j = 0; j < 8; j++) {
+            codeLengthBits[7 - j] = data[offset + j] - '0';
         }
-        offset+=8;
+        offset += 8;
 
-        string code="";
-        for(int j=0;j<codeLengthBits.to_ulong();j++){
-            code+=data[offset+j];
+        string code = "";
+        for (int j = 0; j < codeLengthBits.to_ulong(); j++) {
+            code += data[offset + j];
         }
 
         deCodeMap[code] = i;
 
-        offset+=codeLengthBits.to_ulong();
+        offset += codeLengthBits.to_ulong();
 
     }
     return deCodeMap;
 }
 
-void Huff_Code(Node huffTree[], int n) {
+string *Huff_Code(Node huffTree[]) {
+
     int i, j, k;
     string s = "";
+    string *huffMap = new string[256];
     for (int i2 = 0; i2 < 256; i2++) {
         huffMap[i2] = "";
     }
 
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < 256; i++) {
         s = "";
         j = i;
         while (huffTree[j].parent != -1) //从叶子往上找到根节点
@@ -139,27 +144,33 @@ void Huff_Code(Node huffTree[], int n) {
         }
         huffMap[stoi(huffTree[i].ch)] = huffTree[i].code;
     }
+    return huffMap;
 }
 
-unsigned char *Huff_Decode(Node huffTree[], int n, string s, unsigned char *res,int offset,map<string, int> deCodeMap) {
-    string temp = "", str = "";//保存解码后的字符串
 
+void
+Huff_Decode(string coded, unsigned char *res, int offset, unordered_map<string, int> decodeMap) {
+    string temp = "";
+    string str = "";//保存解码后的字符串
     int res_length = 0;
-    for (int i = offset; i < s.size(); i++) {
-        temp.append(s[i] == '0' ? "0" : "1");
+    int start=offset,tempLength=1;
+    for (int i = offset; i < coded.size(); i++) {
+//        temp+= coded[i] == '0' ? "0" : "1";
+        temp.assign(coded,start,tempLength++);
 
-        if (deCodeMap.find(temp) != deCodeMap.end()) {
-            res[res_length] = deCodeMap[temp];
+        if (decodeMap.find(temp) != decodeMap.end()) {
+            res[res_length] = decodeMap[temp];
             temp = "";
             res_length++;
+            start =i+1;
+            tempLength=1;
 
-        } else if (i == s.size() - 1 && temp != "")//全部遍历后没有
+        } else if (i == coded.size() - 1 && tempLength != 1)//全部遍历后没有
         {
             str = "wrong decode";
         }
 
     }
-    return res;
 }
 
 int *calcFrequence(unsigned char s[], int s_length) {
@@ -180,16 +191,16 @@ int *calcFrequence(unsigned char s[], int s_length) {
 }
 
 
-string recode(unsigned char s[], int s_len) {
+string recode(unsigned char s[], int s_len, string *huffMap) {
     //[(256 bits of huffMap)]
     string res = "";
     for (int i = 0; i < 256; i++) {
-        int code_length =huffMap[i].size();
+        int code_length = huffMap[i].size();
 
         bitset<8> code_length_bits(code_length);
         res += code_length_bits.to_string();
 
-        res+=huffMap[i];
+        res += huffMap[i];
 
     }
 
@@ -203,7 +214,6 @@ string recode(unsigned char s[], int s_len) {
 unsigned char *encodeFromBits(string &s, unsigned char res[]) {
     string sub = s.substr(s.size() - 8, 8);
     int index = 0;
-
 
 
     for (int cur = 0; cur < s.size(); cur += 8, index++) {
@@ -272,13 +282,10 @@ void CAppCompress::CustomFinal(void) {
 }
 
 
-Node *huffTreeG;
-
 // This function compresses input 24-bit image (8-8-8 format, in pInput pointer).
 // This function shall allocate storage space for compressedData, and return it as a pointer.
 // The input reference variable cDataSize, is also serve as an output variable to indicate the size (in bytes) of the compressed data.
 unsigned char *CAppCompress::Compress(int &cDataSize) {
-    unsigned char *compressedData;
     unsigned char *reproducedData = new unsigned char[width * height * 3];
     //第一行和第一排赋值
     for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
@@ -303,41 +310,11 @@ unsigned char *CAppCompress::Compress(int &cDataSize) {
     }
 
 
-    cDataSize = width * height * 3;
-    compressedData = new unsigned char[cDataSize * 2];
+    int *weights = calcFrequence(reproducedData, width * height * 3);
 
-    string strs[256] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",
-                        "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32",
-                        "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48",
-                        "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64",
-                        "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80",
-                        "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96",
-                        "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110",
-                        "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123",
-                        "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136",
-                        "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149",
-                        "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162",
-                        "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175",
-                        "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188",
-                        "189", "190", "191", "192", "193", "194", "195", "196", "197", "198", "199", "200", "201",
-                        "202", "203", "204", "205", "206", "207", "208", "209", "210", "211", "212", "213", "214",
-                        "215", "216", "217", "218", "219", "220", "221", "222", "223", "224", "225", "226", "227",
-                        "228", "229", "230", "231", "232", "233", "234", "235", "236", "237", "238", "239", "240",
-                        "241", "242", "243", "244", "245", "246", "247", "248", "249", "250", "251", "252", "253",
-                        "254", "255"};
-    int *weights = calcFrequence(reproducedData, cDataSize);
-    int strs_len = 0;
-    string recodedStr = "";
-
-    length(strs, strs_len);
-
-    Node *huffTree = new Node[strs_len * 2];
-    huffTreeG = huffTree;
-    Huff_Tree(huffTree, weights, strs, strs_len);
-    Huff_Code(huffTree, strs_len);
-    recodedStr = recode(reproducedData, cDataSize);
-
-    // string uncompressedStr = Huff_Decode(huffTree, strs_len, recodedStr);
+    Node *huffTree = Huff_Tree(weights);
+    string *dict = Huff_Code(huffTree);
+    string recodedStr = recode(reproducedData, width * height * 3, dict);
 
     cDataSize = (int) ceil(recodedStr.size() / 8.0) + 1;
     return encodeFromBits(recodedStr, new unsigned char[(int) ceil(recodedStr.size() / 8.0) + 1]);
@@ -348,15 +325,17 @@ unsigned char *CAppCompress::Compress(int &cDataSize) {
 void CAppCompress::Decompress(unsigned char *compressedData, int cDataSize, unsigned char *uncompressedData) {
 
 
-    string res = decodeFromUnsignedChars(compressedData, cDataSize - 1);
-	int offset;
-    unsigned char *uncompressedStr = Huff_Decode(huffTreeG, 256 * 2, res, uncompressedData,offset,rebuildHuffTree(res,offset));
+    string huffCoded = decodeFromUnsignedChars(compressedData, cDataSize - 1);
+    int offset = 0;
+    unordered_map<string,int> dict = rebuildHuffTree(huffCoded, offset);
+    Huff_Decode(huffCoded, uncompressedData, offset, dict);
+
     for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
         for (int i = 1; i < height; i++) {
             for (int j = 1; j < width; j++) {
-                int A = pInput[(i * width + j - 1) * 3 + bgrIndex];
-                int B = pInput[((i - 1) * width + j) * 3 + bgrIndex];
-                int C = pInput[((i - 1) * width + (j - 1)) * 3];
+                int A = uncompressedData[(i * width + j - 1) * 3 + bgrIndex];
+                int B = uncompressedData[((i - 1) * width + j) * 3 + bgrIndex];
+                int C = uncompressedData[((i - 1) * width + (j - 1)) * 3];
                 int predict = C >= max(A, B) ? min(A, B) : C <= min(A, B) ? max(A, B) : A + B - C;
 
                 uncompressedData[(i * width + j) * 3 + bgrIndex] =
