@@ -1,5 +1,6 @@
 #include "StdAfx.h"
 #include "AppConvert.h"
+#include <math.h>
 
 CAppConvert::CAppConvert(void)
 {
@@ -29,6 +30,11 @@ void CAppConvert::CustomFinal(void) {
 	RemoveTunnel(pOutput420) ;
 }
 
+double round(double r)
+{
+    return (r > 0.0) ? floor(r + 0.5) : ceil(r - 0.5);
+}
+
 // This function converts input RGB image to a YUV image.
 void CAppConvert::RGBtoYUV(unsigned char *pRGB, unsigned char *pYUV) {
 
@@ -40,17 +46,21 @@ void CAppConvert::RGBtoYUV(unsigned char *pRGB, unsigned char *pYUV) {
 
 	int i, j ;
 	int r, g, b ;
-	int Y ;
+	double Y, U, V ;
 
 	for(j = 0; j < height; j++) {
 		for(i = 0; i < width; i++) {
 			b = pRGB[(i + j * width) * 3] ;
 			g = pRGB[(i + j * width) * 3 + 1] ;
 			r = pRGB[(i + j * width) * 3 + 2] ;
-			Y = 299 * r + 587 * g + 114 * b ;
-			pYUV[(i + j * width) * 3] = Y / 1000 ;
-			pYUV[(i + j * width) * 3 + 1] = 128 ;
-			pYUV[(i + j * width) * 3 + 2] = 128 ;
+			Y = r * .299000 + g * .587000 + b * .114000;
+			U =r * -.168736 + g * -.331264 + b * .500000 + 128;
+			V = r * .500000 + g * -.418688 + b * -.081312 + 128;
+
+
+			pYUV[(i + j * width) * 3] = Y>255?255:Y<0?0:Y ;
+			pYUV[(i + j * width) * 3 + 1] = U>255?255:U<0?0:U ;
+			pYUV[(i + j * width) * 3 + 2] = V>255?255:V<0?0:V ;
 		}
 	}
 
@@ -64,15 +74,21 @@ void CAppConvert::YUVtoRGB(unsigned char *pYUV, unsigned char *pRGB) {
 
 	// Sample code start - You may delete these sample code
 	int i, j ;
-	int y ;
+	int y,u,v,r,b,g ;
 
 	for(j = 0; j < height; j++) {
 		for(i = 0; i < width; i++) {
 			y = pYUV[(i + j * width) * 3] ;
+			u = pYUV[(i + j * width) * 3+1] ;
+			v = pYUV[(i + j * width) * 3+2] ;
+			r = round(y + 1.4075 * (v - 128));
+			g = round(y - 0.3455 * (u - 128) - (0.7169 * (v - 128)));
+			b = round(y + 1.7790 * (u - 128));
+			
 
-			pRGB[(i + j * width) * 3] = y ;
-			pRGB[(i + j * width) * 3 + 1] = y;
-			pRGB[(i + j * width) * 3 + 2] = y;
+			pRGB[(i + j * width) * 3] = b>255?255:b<0?0:b ;
+			pRGB[(i + j * width) * 3 + 1] =g>255?255:g<0?0:g;
+			pRGB[(i + j * width) * 3 + 2] =r>255?255:r<0?0:r ;
 		}
 	}
 

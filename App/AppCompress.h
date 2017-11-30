@@ -1,5 +1,8 @@
 #pragma once
 #include "../processing.h"
+#include <string>
+
+#include <cstring>
 
 class CAppCompress :
 	public CProcessing
