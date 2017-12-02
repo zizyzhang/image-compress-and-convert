@@ -229,6 +229,7 @@
   <ItemGroup>
     <ClCompile Include="App\AppCompress.cpp" />
     <ClCompile Include="App\AppConvert.cpp" />
+    <ClCompile Include="App\image-compress.cpp" />
     <ClCompile Include="AviLoader.cpp" />
     <ClCompile Include="AviWriter.cpp" />
     <ClCompile Include="CaptureSelect.cpp" />
@@ -360,6 +361,7 @@
   <ItemGroup>
     <ClInclude Include="App\AppCompress.h" />
     <ClInclude Include="App\AppConvert.h" />
+    <ClInclude Include="App\image-compress.h" />
     <ClInclude Include="AviLoader.h" />
     <ClInclude Include="AviWriter.h" />
     <ClInclude Include="CaptureSelect.h" />

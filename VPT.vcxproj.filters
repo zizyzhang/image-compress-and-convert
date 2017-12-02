@@ -159,6 +159,9 @@
     <ClCompile Include="App\AppConvert.cpp">
       <Filter>Source Files\App</Filter>
     </ClCompile>
+    <ClCompile Include="App\image-compress.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AviLoader.h">
@@ -297,6 +300,9 @@
       <Filter>Header Files\Tools</Filter>
     </ClInclude>
     <ClInclude Include="App\AppConvert.h">
+      <Filter>Header Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="App\image-compress.h">
       <Filter>Header Files\App</Filter>
     </ClInclude>
   </ItemGroup>
