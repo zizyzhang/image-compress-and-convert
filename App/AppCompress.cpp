@@ -206,52 +206,133 @@ unsigned char *recode(unsigned char *input, Node *huffTree, int n,int &recodeSiz
     return output;
 }
 
-unsigned char *decode(unsigned char *input, int* first, int n, int &recodeSize, unordered_map<int,unsigned char>  codeDict,int *codeLength,unsigned char * output){
+struct FastMap {
+public:
+    unsigned char ch;
+    int codeLength;
+    FastMap(){
+        codeLength=-1;
+    }
+};
+
+FastMap * buildFastMap(int *first, int *codeLength, unordered_map<int, unsigned char> codeDict) {
+    int *minValue = new int[32]();
+    FastMap * map=new FastMap [65536]();
+ 
+    for (int i = 1; i <= 16; i++) {
+        for (int j = 0; j < codeLength[i]; j++) {
+			int sp =(first[i] + j + 1) << (16 - i);
+            for (int k = (first[i] + j) << (16 - i);k<sp ; k++) {
+                unsigned char ch = codeDict[first[i] + j];
+                
+                map[k].ch = ch;
+				map[k].codeLength = i;
+
+            }
+        }
+    }
+    return map;
+};
+int getBits(unsigned int &buffer, int &bufferSize, unsigned char *input, int &byteForward) {
+    //bufferSize : buffer中剩余可以使用的bits数量，一开始的时候是0，新增的时候增加，shift掉的时候减少
+    //从一个input中得到一段bits. buffer保存取出来过的bits
+
+    byteForward = 0;
+    if (bufferSize < 16) {
+        //clear buffer
+        buffer >>= (32 - bufferSize);
+        //append data
+        for (int i = 0; i < 2; i++) {
+            buffer <<= 8;
+            buffer |= input[0];
+            input++;
+            byteForward++;
+        }
+        //append zero
+        buffer <<= (16 - bufferSize);
+        bufferSize += 16;
+    }
+
+    int result = (buffer >> 16);
+    return result;
+}
+
+bool getBit(unsigned int &buffer, int &bufferSize, unsigned char *input, int &byteForward) {
+    byteForward = 0;
+    if (bufferSize < 16) {
+        //clear buffer
+        buffer >>= (32 - bufferSize);
+        //append data
+        for (int i = 0; i < 2; i++) {
+            buffer <<= 8;
+            buffer |= input[0];
+            input++;
+            byteForward++;
+        }
+        //append zero
+        buffer <<= (16 - bufferSize);
+        bufferSize += 16;
+    }
+
+    bool result = (bool) (buffer >> 31);
+    return result;
+}
+
+
+void shiftBuffer(unsigned int &buffer, int &bufferSize, int n) {
+    buffer <<= n;
+    bufferSize -= n;
+}
+
+unsigned char *decode(unsigned char *input, int *first, int n, int &recodeSize,
+                      unordered_map<int, unsigned char> codeDict, int *codeLength, unsigned char* output) {
 
  
-    int bitIndex=0;
-    int byteIndex =0;
 
-	int lMax=0;
-	int*minValue = new int[32]();
-	for(lMax=31;lMax>=0;lMax--){
-		if(codeLength[lMax]>0)break;
-	}
- 
-	for(int len=1; len<32; len++){
-		minValue[len] = first[len] << (lMax-len);
-	}
-   
+    auto fm = buildFastMap(first, codeLength, codeDict);
+//    printf("\n%d\n",fm[226]->ch);
+    int bitForward = 0;
+    int bits = 0;
+    unsigned int buffer = 0;
+    int bufferSize = 0;
 
     for (int i = 0; i < n; i++) {
-        int len = 1;
-        bool bit =((input[byteIndex] >> (7-bitIndex)) & 1);
-        if (bitIndex < 7) {
-            bitIndex++;
-        }else{
-            bitIndex=0;
-            byteIndex++;
-        }
-        int code = bit;
+        bits = getBits(buffer, bufferSize, input, bitForward);
+        input += bitForward;
+        if (fm[bits].codeLength!=-1) {
+            output[i] = fm[bits].ch;
 
-        while(code-first[len]>=codeLength[len])
-        {
-            code <<= 1;
-            bool bit =((input[byteIndex] >> (7-bitIndex)) & 1);
-            if (bitIndex < 7) {
-                bitIndex++;
-            }else{
-                bitIndex=0;
-                byteIndex++;
+            shiftBuffer(buffer, bufferSize, fm[bits].codeLength);
+
+        } else {
+			shiftBuffer(buffer, bufferSize,16);
+            int len = 16;
+            int code = bits;
+			unsigned int bufferCpy = buffer;
+			int bufferSizeCpy =bufferSize;
+			auto inputCpy = input;
+
+			
+            while (code - first[len] >= codeLength[len]) {
+                code <<= 1;
+                bool bit = getBit(bufferCpy, bufferSizeCpy, inputCpy, bitForward);
+                inputCpy += bitForward;
+				shiftBuffer(bufferCpy, bufferSizeCpy, 1);
+                code |= bit;
+                len++;
             }
-            code |=bit;
-            len++;
+			 getBits(buffer, bufferSize, input, bitForward);
+			 input+=bitForward;
+            shiftBuffer(buffer, bufferSize, len-16);
+            output[i] = codeDict[code];
         }
-        len--;
-        output[i]= codeDict[code];
+
 
     }
+
+
     return output;
+
 }
 
 CAppCompress::CAppCompress(void) {
