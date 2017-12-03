@@ -356,15 +356,8 @@ void CAppCompress::CustomFinal(void) {
 }
  
  
-
-
-// This function compresses input 24-bit image (8-8-8 format, in pInput pointer).
-// This function shall allocate storage space for compressedData, and return it as a pointer.
-// The input reference variable cDataSize, is also serve as an output variable to indicate the size (in bytes) of the compressed data.
-unsigned char *CAppCompress::Compress(int &cDataSize) {
-    unsigned char *reproducedData = new unsigned char[width * height * 3];
-    //第一行和第一排赋值
-    for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
+void decorrelation(unsigned char * reproducedData,int width, int height,unsigned char * pInput){
+	  for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
         for (int i = 0; i < width; i++) {
             reproducedData[i * 3 + bgrIndex] = pInput[i * 3 + bgrIndex];
         }
@@ -384,35 +377,10 @@ unsigned char *CAppCompress::Compress(int &cDataSize) {
             }
         }
     }
-	int *codeLength;
-	codeLength = new int[32]();
-	int *frq = calcFrequence(reproducedData, width * height*3);
-
-	Node *huffTree = buildHuffTree(frq);
-    huffTree = calcHuffCodeLength(huffTree, codeLength);
-	int *firstCode   = calcFirstCode(codeLength);
-	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
-	int recodeSize = 0;
-	unsigned char *recoded = recode(reproducedData,huffTree,width*height*3,recodeSize);
-	cDataSize=recodeSize;
-
-	return recoded;
 }
 
-// This function takes in compressedData with size cDatasize, and decompresses it into 8-8-8 image.
-// The decompressed image data should be stored into the uncompressedData buffer, with 8-8-8 image format
-void CAppCompress::Decompress(unsigned char *compressedData, int cDataSize, unsigned char *uncompressedData) {
-
-	int *codeLength=new int[32]();
-	Node * huffTree= rebuildHuffTree(compressedData,codeLength);
-	int* firstCode = calcFirstCode(codeLength);
-	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
-
-	compressedData+=256;
-	cDataSize -= 256;
-
-	decode(compressedData, firstCode, width * height*3, cDataSize, codeDict,codeLength,uncompressedData);
-    for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
+void reCorrelation(unsigned char * uncompressedData,int width, int height){
+	  for (int bgrIndex = 0; bgrIndex < 3; bgrIndex++) {
         for (int i = 1; i < height; i++) {
             for (int j = 1; j < width; j++) {
                 int A = uncompressedData[(i * width + j - 1) * 3 + bgrIndex];
@@ -427,6 +395,61 @@ void CAppCompress::Decompress(unsigned char *compressedData, int cDataSize, unsi
     }
 }
 
+
+
+// This function compresses input 24-bit image (8-8-8 format, in pInput pointer).
+// This function shall allocate storage space for compressedData, and return it as a pointer.
+// The input reference variable cDataSize, is also serve as an output variable to indicate the size (in bytes) of the compressed data.
+unsigned char *CAppCompress::Compress(int &cDataSize) {
+    unsigned char *reproducedData = new unsigned char[width * height * 3];
+    //decorrelation 依据jpeg标准去除相关性
+	decorrelation(reproducedData,width,height,pInput);
+
+	//计算频率
+	int *codeLength;
+	codeLength = new int[32]();
+	int *frq = calcFrequence(reproducedData, width * height*3);
+
+	//建立范式哈夫曼树，包含码长和同组序号
+	Node *huffTree = buildHuffTree(frq);
+	//建立码长出现次数表
+    huffTree = calcHuffCodeLength(huffTree, codeLength);
+	//建立每个长度编码的最小值表
+	int *firstCode   = calcFirstCode(codeLength);
+	//依据编码最小值以及每个元素的同组序号(编码在Node.groupIndex中）分配编码。 
+	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
+	
+	//重新编码，在头部添加码长信息，（空间可以再优化，不在此实现）
+	int recodeSize = 0;
+	unsigned char *recoded = recode(reproducedData,huffTree,width*height*3,recodeSize);
+	cDataSize=recodeSize;
+
+	return recoded;
+}
+
+// This function takes in compressedData with size cDatasize, and decompresses it into 8-8-8 image.
+// The decompressed image data should be stored into the uncompressedData buffer, with 8-8-8 image format
+void CAppCompress::Decompress(unsigned char *compressedData, int cDataSize, unsigned char *uncompressedData) {
+
+	//重新编码哈夫曼树，此哈夫曼树只记录每个编码的码长和同组序号、生成各码长出现次数表。
+	int *codeLength=new int[32]();
+	Node * huffTree= rebuildHuffTree(compressedData,codeLength);
+
+	//建立首编码表
+	int* firstCode = calcFirstCode(codeLength);
+	
+	//分配编码制作解码表
+	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
+
+	compressedData+=256;
+	cDataSize -= 256;
+
+	//建立16位快表并解码
+	decode(compressedData, firstCode, width * height*3, cDataSize, codeDict,codeLength,uncompressedData);
+	
+	//重新相关
+	reCorrelation(uncompressedData,width,height);
+}
 
 void CAppCompress::Process(void) {
 
