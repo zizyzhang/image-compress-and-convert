@@ -370,7 +370,7 @@ void decorrelation(unsigned char * reproducedData,int width, int height,unsigned
             for (int j = 1; j < width; j++) {
                 int A = pInput[(i * width + j - 1) * 3 + bgrIndex];
                 int B = pInput[((i - 1) * width + j) * 3 + bgrIndex];
-                int C = pInput[((i - 1) * width + (j - 1)) * 3];
+                int C = pInput[((i - 1) * width + (j - 1)) * 3+ bgrIndex];
                 int predict = C >= max(A, B) ? min(A, B) : C <= min(A, B) ? max(A, B) : A + B - C;
 
                 reproducedData[(i * width + j) * 3 + bgrIndex] = pInput[(i * width + j) * 3 + bgrIndex] - predict;//差值
@@ -385,7 +385,7 @@ void reCorrelation(unsigned char * uncompressedData,int width, int height){
             for (int j = 1; j < width; j++) {
                 int A = uncompressedData[(i * width + j - 1) * 3 + bgrIndex];
                 int B = uncompressedData[((i - 1) * width + j) * 3 + bgrIndex];
-                int C = uncompressedData[((i - 1) * width + (j - 1)) * 3];
+                int C = uncompressedData[((i - 1) * width + (j - 1)) * 3+ bgrIndex];
                 int predict = C >= max(A, B) ? min(A, B) : C <= min(A, B) ? max(A, B) : A + B - C;
 
                 uncompressedData[(i * width + j) * 3 + bgrIndex] =
