@@ -36,9 +36,9 @@ int *calcFrequence(unsigned char *stream, int n) {
 
 void Select(Node huffTree[], int *a, int *b, int n) {
     int i;
-    double frq = 0; //找最小的数
+    double frq = 0; //find the smallest
     for (i = 0; i < n; i++) {
-        if (huffTree[i].parent != -1)     //判断节点是否已经选过
+        if (huffTree[i].parent != -1)     //determine whether the node is selected
             continue;
         else {
             if (frq == 0) {
@@ -52,9 +52,9 @@ void Select(Node huffTree[], int *a, int *b, int n) {
             }
         }
     }
-    frq = 0; //找第二小的数
+    frq = 0; //find the second smallest frequency
     for (i = 0; i < n; i++) {
-        if (huffTree[i].parent != -1 || (i == *a))//排除已选过的数
+        if (huffTree[i].parent != -1 || (i == *a))//Exclude the selected number
             continue;
         else {
             if (frq == 0) {
@@ -69,7 +69,7 @@ void Select(Node huffTree[], int *a, int *b, int n) {
         }
     }
     int temp;
-    if (huffTree[*a].lChild < huffTree[*b].lChild)  //小的数放左边
+    if (huffTree[*a].lChild < huffTree[*b].lChild)  //put the smaller number one the left
     {
 
         temp = *a;
@@ -80,7 +80,7 @@ void Select(Node huffTree[], int *a, int *b, int n) {
 
 Node *buildHuffTree(int *w) {
     Node *huffTree = new Node[256 * 2];
-    for (int i = 0; i < 2 * 256 - 1; i++) //初始过程
+    for (int i = 0; i < 2 * 256 - 1; i++) //Initial process
     {
         huffTree[i].parent = -1;
         huffTree[i].lChild = -1;
@@ -97,7 +97,7 @@ Node *buildHuffTree(int *w) {
     for (int k = 256; k < 2 * 256 - 1; k++) {
         int i1 = 0;
         int i2 = 0;
-        Select(huffTree, &i1, &i2, k); //将i1，i2节点合成节点k
+        Select(huffTree, &i1, &i2, k); //Merge node i1，i2 to node k
         huffTree[i1].parent = k;
         huffTree[i2].parent = k;
         huffTree[k].frq = huffTree[i1].frq + huffTree[i2].frq;
@@ -112,7 +112,7 @@ Node *calcHuffCodeLength(Node *huffTree, int *codeLength) {
 
     for (i = 0; i < 256; i++) {
         j = i;
-        while (huffTree[j].parent != -1) //从叶子往上找到根节点
+        while (huffTree[j].parent != -1) //Find the root node from the leaf node
         {
             huffTree[i].depth++;
             j = huffTree[j].parent;
@@ -234,8 +234,8 @@ FastMap * buildFastMap(int *first, int *codeLength, unordered_map<int, unsigned 
     return map;
 };
 int getBits(unsigned int &buffer, int &bufferSize, unsigned char *input, int &byteForward) {
-    //bufferSize : buffer中剩余可以使用的bits数量，一开始的时候是0，新增的时候增加，shift掉的时候减少
-    //从一个input中得到一段bits. buffer保存取出来过的bits
+    //bufferSize : the number of available bits left in buffer，initialized 0，increase when added，decrease when shifted
+    //get a piece of bitsfrom an inputget . save the fetched bits in the buffer
 
     byteForward = 0;
     if (bufferSize < 16) {
@@ -370,7 +370,7 @@ void decorrelation(unsigned char * reproducedData,int width, int height,unsigned
             for (int j = 1; j < width; j++) {
                 int A = pInput[(i * width + j - 1) * 3 + bgrIndex];
                 int B = pInput[((i - 1) * width + j) * 3 + bgrIndex];
-                int C = pInput[((i - 1) * width + (j - 1)) * 3+ bgrIndex];
+				int C = pInput[((i - 1) * width + (j - 1)) * 3+bgrIndex];
                 int predict = C >= max(A, B) ? min(A, B) : C <= min(A, B) ? max(A, B) : A + B - C;
 
                 reproducedData[(i * width + j) * 3 + bgrIndex] = pInput[(i * width + j) * 3 + bgrIndex] - predict;//差值
@@ -402,24 +402,24 @@ void reCorrelation(unsigned char * uncompressedData,int width, int height){
 // The input reference variable cDataSize, is also serve as an output variable to indicate the size (in bytes) of the compressed data.
 unsigned char *CAppCompress::Compress(int &cDataSize) {
     unsigned char *reproducedData = new unsigned char[width * height * 3];
-    //decorrelation 依据jpeg标准去除相关性
+    //decorrelation according to jpeg standard
 	decorrelation(reproducedData,width,height,pInput);
 
-	//计算频率
+	//calculate frequency
 	int *codeLength;
 	codeLength = new int[32]();
 	int *frq = calcFrequence(reproducedData, width * height*3);
 
-	//建立范式哈夫曼树，包含码长和同组序号
+	//establish a Canonical Huffman tree,including codeLength and group index
 	Node *huffTree = buildHuffTree(frq);
-	//建立码长出现次数表
+	//establish HuffCodeLength frequency table
     huffTree = calcHuffCodeLength(huffTree, codeLength);
-	//建立每个长度编码的最小值表
+	//establish FirstCode table for each codeLength
 	int *firstCode   = calcFirstCode(codeLength);
-	//依据编码最小值以及每个元素的同组序号(编码在Node.groupIndex中）分配编码。 
+	// Assign code according to FirstCode and group index of each symble(in Node.groupIndex）。
 	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
 	
-	//重新编码，在头部添加码长信息，（空间可以再优化，不在此实现）
+	//recode，add code length information on the head，（Spatial optimizable，not here）
 	int recodeSize = 0;
 	unsigned char *recoded = recode(reproducedData,huffTree,width*height*3,recodeSize);
 	cDataSize=recodeSize;
@@ -431,23 +431,23 @@ unsigned char *CAppCompress::Compress(int &cDataSize) {
 // The decompressed image data should be stored into the uncompressedData buffer, with 8-8-8 image format
 void CAppCompress::Decompress(unsigned char *compressedData, int cDataSize, unsigned char *uncompressedData) {
 
-	//重新编码哈夫曼树，此哈夫曼树只记录每个编码的码长和同组序号、生成各码长出现次数表。
+	//recode huffmanTree，which only record codeLength、groupIndex and codeLength frequency table。
 	int *codeLength=new int[32]();
 	Node * huffTree= rebuildHuffTree(compressedData,codeLength);
 
-	//建立首编码表
+	//establish firstCode table
 	int* firstCode = calcFirstCode(codeLength);
 	
-	//分配编码制作解码表
+	//Assign code and establish decode table
 	unordered_map<int,unsigned char> codeDict = assignCode(huffTree, firstCode);
 
 	compressedData+=256;
 	cDataSize -= 256;
 
-	//建立16位快表并解码
+	//establish 16-bits fastMap and decode
 	decode(compressedData, firstCode, width * height*3, cDataSize, codeDict,codeLength,uncompressedData);
 	
-	//重新相关
+	//reCorrelation
 	reCorrelation(uncompressedData,width,height);
 }
 
